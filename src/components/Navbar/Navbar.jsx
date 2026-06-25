@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isMobileDestinationsOpen, setIsMobileDestinationsOpen] = useState(false);
   const location = useLocation();
 
   const isHomePage = location.pathname === '/';
@@ -35,13 +36,28 @@ export default function Navbar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsSearchOpen(false);
+    setIsMobileDestinationsOpen(false);
   }, [location.pathname]);
+
+  const destinations = [
+    'United States',
+    'New Jersey',
+    'Singapore',
+    'Paris',
+    'Muscat',
+    'Jaipur',
+    'Goa',
+    'Bali',
+    'Srilanka',
+    'Andaman',
+    'Kerala'
+  ];
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Work', path: '/work' },
+    { name: 'Destination', path: '/destination' },
     { name: 'Galleries', path: '/galleries' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
@@ -77,29 +93,67 @@ export default function Navbar() {
           {/* Logo - Zero Gravity Photography PNG Logo */}
           <NavLink to="/" className="flex items-center space-x-3 group">
             <img src="/logo.png" alt="Zero Gravity Photography Logo" className="w-10 h-10 object-contain rounded-full flex-shrink-0" />
-            <span className={`font-heading text-sm md:text-sm font-light tracking-[0.2em] ${logoColorClass} uppercase`}>
+            <span className={`font-heading text-sm md:text-sm font-normal tracking-[0.2em] ${logoColorClass} uppercase`}>
               Zero Gravity <br /> Photography
             </span>
           </NavLink>
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 ${isActive
-                    ? 'text-brand-pink font-semibold'
-                    : isHomePage
-                      ? 'text-white/70 hover:text-white'
-                      : 'text-black/60 hover:text-black'
-                  }`
-                }
-              >
-                {link.name} +
-              </NavLink>
-            ))}
+            {navLinks.map((link) => {
+              if (link.name === 'Destination') {
+                return (
+                  <div key={link.name} className="relative group py-2">
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 font-semibold ${isActive
+                          ? 'text-brand-pink'
+                          : isHomePage
+                            ? 'text-white/95 hover:text-white'
+                            : 'text-black/90 hover:text-black'
+                        }`
+                      }
+                    >
+                      {link.name} +
+                    </NavLink>
+                    {/* Dropdown Menu Container */}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white/95 backdrop-blur-md border border-black/5 rounded-xl shadow-xl p-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-left">
+                        {destinations.map((loc) => {
+                          const slug = loc.toLowerCase().replace(/\s+/g, '-');
+                          return (
+                            <NavLink
+                              key={loc}
+                              to={`/destination?loc=${slug}`}
+                              className="text-xs font-heading tracking-wider uppercase text-neutral-900 hover:text-brand-pink hover:translate-x-1 transition-all duration-200 block py-1 font-semibold"
+                            >
+                              {loc}
+                            </NavLink>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 font-semibold ${isActive
+                      ? 'text-brand-pink'
+                      : isHomePage
+                        ? 'text-white/95 hover:text-white'
+                        : 'text-black/90 hover:text-black'
+                    }`
+                  }
+                >
+                  {link.name} +
+                </NavLink>
+              );
+            })}
           </div>
 
           {/* Right Toolbar */}
@@ -189,15 +243,51 @@ export default function Navbar() {
                   transition={{ delay: idx * 0.05 }}
                   key={link.name}
                 >
-                  <NavLink
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `text-xs font-heading tracking-[0.2em] uppercase transition-colors duration-300 block py-2 ${isActive ? 'text-brand-pink font-semibold border-l-2 border-brand-pink pl-3' : 'text-black/70 hover:text-black pl-3'
-                      }`
-                    }
-                  >
-                    {link.name} +
-                  </NavLink>
+                  {link.name === 'Destination' ? (
+                    <div className="flex flex-col">
+                      <button
+                        onClick={() => setIsMobileDestinationsOpen(!isMobileDestinationsOpen)}
+                        className="text-xs font-heading tracking-[0.2em] uppercase transition-colors duration-300 flex items-center justify-between py-2 text-black/70 hover:text-black pl-3 w-full text-left font-semibold"
+                      >
+                        <span>{link.name}</span>
+                        <span className="text-brand-pink text-sm font-semibold pr-2">{isMobileDestinationsOpen ? '−' : '+'}</span>
+                      </button>
+                      <AnimatePresence>
+                        {isMobileDestinationsOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="pl-6 flex flex-col space-y-2.5 overflow-hidden py-2"
+                          >
+                            {destinations.map((loc) => {
+                              const slug = loc.toLowerCase().replace(/\s+/g, '-');
+                              return (
+                                <NavLink
+                                  key={loc}
+                                  to={`/destination?loc=${slug}`}
+                                  className="text-xs font-heading tracking-wider uppercase text-neutral-900 hover:text-brand-pink block py-1.5 border-b border-black/5 font-semibold"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                  {loc}
+                                </NavLink>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `text-xs font-heading tracking-[0.2em] uppercase transition-colors duration-300 block py-2 font-semibold ${isActive ? 'text-brand-pink border-l-2 border-brand-pink pl-3' : 'text-black/70 hover:text-black pl-3'
+                        }`
+                      }
+                    >
+                      {link.name} +
+                    </NavLink>
+                  )}
                 </motion.div>
               ))}
             </div>

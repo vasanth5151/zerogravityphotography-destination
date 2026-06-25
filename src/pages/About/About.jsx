@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Heart, Compass, Award, Users, ArrowRight } from 'lucide-react';
 import { aboutStats, teamMembers, timelineEvents, awardsList } from '../../data/mockData';
 import Footer from '../../components/Footer/Footer';
+import Ajay from '../../assets/Ajay.webp';
 
 // A simple count-up statistic component styled for light theme
 function StatItem({ value, label, icon: Icon }) {
@@ -14,7 +15,7 @@ function StatItem({ value, label, icon: Icon }) {
     let start = 0;
     const duration = 2000;
     const increment = target / (duration / 16);
-    
+
     const timer = setInterval(() => {
       start += increment;
       if (start >= target) {
@@ -69,7 +70,7 @@ export default function About() {
       {/* Profile & History Split Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: Image Card with luxury frame */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -80,8 +81,8 @@ export default function About() {
           >
             <div className="absolute -inset-4 border border-brand-pink/30 rounded translate-x-2 translate-y-2 pointer-events-none" />
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80"
-              alt="Aria Montgomery Founder"
+              src={Ajay}
+              alt="Aria Benjamin Founder"
               className="relative z-10 w-full aspect-[4/5] object-cover rounded shadow-lg"
             />
           </motion.div>
@@ -94,24 +95,26 @@ export default function About() {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-black leading-tight">
+            <h2 className="font-body text-3xl md:text-4xl font-light text-black leading-tight">
               A Love Affair with <span className="text-brand-pink">Visual Romance</span>
             </h2>
-            <p className="text-text-muted text-xs md:text-sm font-light leading-relaxed">
-              Founded in Paris, Lumina Studio specializes in capturing the delicate threads of destination wedding stories. We approach weddings not as formal events, but as a living canvas of editorial artistry.
+            <p className="text-text-muted text-xs md:text-sm font-body leading-relaxed">
+              As he was waiting to go abroad to do his Masters, his love for Photography found him. An engineer turned photographer, an avid entrepreneur, an excited traveler,
+              and a car enthusiast! With his creativity and unconditional love for photography, Ajay has always tried to break the glass ceiling in the most creative ways.
+              What began only as a hobby soon found him working freelance gigs. The more photos he took the more he realized this is what he wanted to do. Ajay has always
+              believed that a wedding is not just the culmination of a couple’s commitment. He’s the storyteller in the mix; He believes every Wedding has a story waiting
+              to be discovered and hunts the story down with his lens. His passion and contagious enthusiasm for portraying the story people want to tell show in all our photos. E-mail: ajay@zgstudios.com
             </p>
-            <p className="text-text-muted text-xs md:text-sm font-light leading-relaxed">
-              Our style blends editorial fashion styling with deep documentary realism. We hunt for natural, soft-warm lighting, raw tears of emotion, and majestic architectural lines that frame your vows. We believe every photograph should evoke the scent of Mediterranean wind and the warmth of Tuscan evenings.
-            </p>
+
 
             <div className="pt-4 grid grid-cols-2 gap-6 border-t border-black/5">
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Mission</h4>
-                <p className="text-xs text-text-muted font-light leading-relaxed">To document your wedding with a bespoke luxury aesthetic that remains captivating decades later.</p>
+                <p className="text-xs text-text-muted font-normal leading-relaxed">To document your wedding with a bespoke luxury aesthetic that remains captivating decades later.</p>
               </div>
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Vision</h4>
-                <p className="text-xs text-text-muted font-light leading-relaxed">Fusing the timeless elegance of classic film with contemporary digital storytelling masterworks.</p>
+                <p className="text-xs text-text-muted font-normal leading-relaxed">Fusing the timeless elegance of classic film with contemporary digital storytelling masterworks.</p>
               </div>
             </div>
           </motion.div>
@@ -259,7 +262,7 @@ export default function About() {
           <div className="pt-4">
             <Link
               to="/contact"
-              className="inline-flex items-center space-x-3 bg-black hover:bg-black/85 px-8 py-4 rounded-full text-[10px] font-heading tracking-[0.2em] text-white uppercase transition-all duration-300 hover:scale-105 shadow-md"
+              className="inline-flex items-center space-x-3 bg-[#E5A9B4] hover:bg-black/85 px-8 py-4 rounded-full text-[10px] font-heading tracking-[0.2em] text-white uppercase transition-all duration-300 hover:scale-105 shadow-md"
             >
               <span>Book a Session</span>
               <ArrowRight className="w-4 h-4" />

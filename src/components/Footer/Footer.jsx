@@ -62,7 +62,7 @@ export default function Footer() {
               <NavLink to="/services" className="hover:text-black transition-colors font-light">Services & Pricing</NavLink>
             </li>
             <li>
-              <NavLink to="/work" className="hover:text-black transition-colors font-light">Portfolio Work</NavLink>
+              <NavLink to="/destination" className="hover:text-black transition-colors font-light">Destination Weddings</NavLink>
             </li>
             <li>
               <NavLink to="/galleries" className="hover:text-black transition-colors">Gallery Albums</NavLink>

@@ -1,9 +1,18 @@
 // High-quality mock data for Lumina Premium Destination Wedding Photography
+import herosectionImg1 from "../assets/herosection/herosection-img-1.webp";
+import herosectionImg2 from "../assets/herosection/herosection-img-2.webp";
+import herosectionImg3 from "../assets/herosection/herosection-img-3.webp";
+import herosectionImg4 from "../assets/herosection/herosection-img-4.webp";
+import herosectionImg5 from "../assets/herosection/herosection-img-5.webp";
+import herosectionImg6 from "../assets/herosection/herosection-img-6.webp";
+import herosectionImg7 from "../assets/herosection/herosection-img-7.webp";
+import herosectionImg8 from "../assets/herosection/herosection-img-8.webp";
+import herosectionImg9 from "../assets/herosection/herosection-img-9.webp";
 
 export const heroSlides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg1,
     title: "Lumina Studio",
     subtitle: "Timeless Destination Wedding Photography",
     location: "Lake Como, Italy",
@@ -11,7 +20,7 @@ export const heroSlides = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg2,
     title: "Elegance Restored",
     subtitle: "Capturing Pure Romantic Essence",
     location: "Amalfi Coast, Italy",
@@ -19,7 +28,7 @@ export const heroSlides = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg3,
     title: "Venetian Dreams",
     subtitle: "A Grand Romance on the Water",
     location: "Venice, Italy",
@@ -27,7 +36,7 @@ export const heroSlides = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg4,
     title: "Parisian Vogue",
     subtitle: "Chic Editorial Moments by the Seine",
     location: "Paris, France",
@@ -35,7 +44,7 @@ export const heroSlides = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg5,
     title: "Golden Hour Glow",
     subtitle: "Warm Cinematic Portraits Under Tuscan Skies",
     location: "Tuscany, Italy",
@@ -43,7 +52,7 @@ export const heroSlides = [
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1507504038482-7621c97a0e5b?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg6,
     title: "Santorini Sunset",
     subtitle: "Cliffside Nuptials Overlooking the Aegean",
     location: "Santorini, Greece",
@@ -51,7 +60,7 @@ export const heroSlides = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg7,
     title: "Château Splendor",
     subtitle: "Baroque Elegance and Timeless Vows",
     location: "Loire Valley, France",
@@ -59,7 +68,7 @@ export const heroSlides = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg8,
     title: "Orangerie Reception",
     subtitle: "Luxury Tablescapes & Fairy Light Skies",
     location: "Provence, France",
@@ -67,7 +76,7 @@ export const heroSlides = [
   },
   {
     id: 9,
-    image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg9,
     title: "Endless Horizons",
     subtitle: "Editorial Couple Walk in Lavender Fields",
     location: "Valensole, France",
@@ -75,7 +84,7 @@ export const heroSlides = [
   },
   {
     id: 10,
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg1,
     title: "Whispered Promises",
     subtitle: "Detail Shots of Ring Exchanging Ceremonies",
     location: "Vienna, Austria",
@@ -83,7 +92,7 @@ export const heroSlides = [
   },
   {
     id: 11,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg4,
     title: "Vogue Bride",
     subtitle: "High-Fashion Editorial Bridal Styling",
     location: "Milan, Italy",
@@ -91,7 +100,7 @@ export const heroSlides = [
   },
   {
     id: 12,
-    image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1920&q=85",
+    image: herosectionImg6,
     title: "The First Dance",
     subtitle: "Swept Away in a Waltz Under the Stars",
     location: "Marrakech, Morocco",

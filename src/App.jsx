@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
-import Work from './pages/Work/Work';
+import Destination from './pages/Destination/Destination';
 import Galleries from './pages/Galleries/Galleries';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
@@ -96,14 +96,14 @@ export default function App() {
       <ScrollRestoration />
       <CustomCursor />
       <Navbar />
-      
+
       {/* Manage transition timings for switching pages */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-          <Route path="/work" element={<PageWrapper><Work /></PageWrapper>} />
+          <Route path="/destination" element={<PageWrapper><Destination /></PageWrapper>} />
           <Route path="/galleries" element={<PageWrapper><Galleries /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />

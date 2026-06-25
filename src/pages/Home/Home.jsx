@@ -141,13 +141,10 @@ export default function Home() {
       {/* Main Center Call to Action Typography - Single static text overlay */}
       <div className="absolute inset-0 z-20 flex items-center px-8 md:px-16 lg:px-24">
         <div className="max-w-4xl space-y-4 md:space-y-6">
-          <div className="text-[10px] font-heading tracking-[0.3em] text-brand-pink uppercase font-semibold">
-            Premium wedding Photography
-          </div>
 
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-white leading-tight tracking-wide">
+          {/* <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extralight text-white/85 leading-tight tracking-wide">
             Capturing Stories Through Timeless Visuals
-          </h1>
+          </h1> */}
 
         </div>
       </div>
@@ -155,12 +152,12 @@ export default function Home() {
       {/* Floating Bottom Navigation Strip (Styled precisely after Oni Photography) */}
       <div className="absolute inset-x-0 bottom-16 z-30 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 select-none">
 
-        {/* Left Side: Share Icon & Project Info */}
-        <div className="flex items-center space-x-6 text-white w-full md:w-auto justify-between md:justify-start">
+        {/* Left Side: Share Icon & Project Info wrapped in elegant transparent glass pill */}
+        <div className="flex items-center space-x-4 bg-white/10 border border-white/20 shadow-lg rounded-full p-2 pr-6 select-none w-full md:w-auto">
           <div className="relative">
             <button
               onClick={handleShareClick}
-              className="p-3 bg-white/5 hover:bg-brand-pink hover:text-bg-dark rounded-full transition-all duration-300"
+              className="p-2.5 hover:bg-brand-pink hover:text-white text-white/90 rounded-full transition-all duration-300 cursor-pointer flex items-center justify-center"
               title="Share portfolio"
             >
               {shareCopied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
@@ -180,31 +177,31 @@ export default function Home() {
             </AnimatePresence>
           </div>
 
-          <div className="w-[1px] h-8 bg-white/20 hidden md:block" />
+          <div className="w-[1px] h-6 bg-white/20" />
 
           <div className="text-left font-heading">
-            <div className="text-xs font-semibold text-white tracking-widest uppercase">
+            <div className="text-xs font-bold text-white tracking-widest uppercase">
               {currentSlide.title}
             </div>
-            <div className="text-[9px] text-white/50 tracking-[0.2em] uppercase mt-1">
+            <div className="text-[9px] text-white/70 tracking-[0.2em] uppercase mt-1 font-semibold">
               {currentSlide.location}
             </div>
           </div>
         </div>
 
-        {/* Center: Slide Switch Control Nodes */}
-        <div className="flex items-center space-x-6 bg-white/5 border border-white/10 rounded-full px-6 py-2">
+        {/* Center: Slide Switch Control Nodes wrapped in elegant transparent glass pill */}
+        <div className="flex items-center space-x-6 bg-white/10 border border-white/20 shadow-lg rounded-full px-6 py-2">
           {/* Grid Layout Link */}
-          <Link to="/galleries" className="text-white/55 hover:text-brand-pink transition-colors" title="View Grid Galleries">
+          <Link to="/galleries" className="text-white/80 hover:text-brand-pink transition-colors cursor-pointer" title="View Grid Galleries">
             <Grid className="w-4 h-4" />
           </Link>
 
-          <span className="w-[1px] h-4 bg-white/10" />
+          <span className="w-[1px] h-4 bg-white/20" />
 
           {/* Prev slide */}
           <button
             onClick={() => changeSlide('prev')}
-            className="text-white/55 hover:text-brand-pink transition-colors p-1"
+            className="text-white/80 hover:text-brand-pink transition-colors p-1 cursor-pointer"
             title="Previous"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -213,7 +210,7 @@ export default function Home() {
           {/* Play/Pause slide autoplay */}
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="text-white/85 hover:text-brand-pink transition-colors p-2 bg-white/5 hover:bg-white/15 rounded-full"
+            className="text-white hover:text-brand-pink transition-colors p-2 bg-white/10 hover:bg-white/20 rounded-full cursor-pointer"
             title={isPlaying ? 'Pause Autoplay' : 'Start Autoplay'}
           >
             {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-current" />}
@@ -222,18 +219,18 @@ export default function Home() {
           {/* Next slide */}
           <button
             onClick={() => changeSlide('next')}
-            className="text-white/55 hover:text-brand-pink transition-colors p-1"
+            className="text-white/80 hover:text-brand-pink transition-colors p-1 cursor-pointer"
             title="Next"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Right Side: Horizontal Slide Progress Line and Fullscreen Control */}
-        <div className="flex items-center space-x-8 text-white w-full md:w-auto justify-between md:justify-end">
+        {/* Right Side: Horizontal Slide Progress Line and Fullscreen Control wrapped in elegant transparent glass pill */}
+        <div className="flex items-center space-x-6 bg-white/10 border border-white/20 shadow-lg rounded-full p-2 pl-6 select-none w-full md:w-auto justify-between md:justify-end">
           {/* Slider Line Indicator */}
           <div className="flex items-center space-x-4">
-            <span className="text-xs font-heading font-medium tracking-widest text-brand-pink">
+            <span className="text-xs font-heading font-bold tracking-widest text-brand-pink">
               {formatNumber(currentIndex + 1)}
             </span>
             <div className="w-20 md:w-32 h-[1px] bg-white/20 relative">
@@ -244,17 +241,17 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
               />
             </div>
-            <span className="text-xs font-heading tracking-widest text-white/55">
+            <span className="text-xs font-heading tracking-widest text-white/60 font-semibold">
               {formatNumber(heroSlides.length)}
             </span>
           </div>
 
-          <div className="w-[1px] h-8 bg-white/20 hidden md:block" />
+          <div className="w-[1px] h-6 bg-white/20" />
 
           {/* Fullscreen request button */}
           <button
             onClick={toggleFullscreen}
-            className="p-3 bg-white/5 hover:bg-brand-pink hover:text-bg-dark rounded-full transition-all duration-300"
+            className="p-2.5 hover:bg-brand-pink hover:text-white text-white/90 rounded-full transition-all duration-300 cursor-pointer flex items-center justify-center"
             title="Toggle fullscreen mode"
           >
             <Maximize2 className="w-4 h-4" />
@@ -263,17 +260,19 @@ export default function Home() {
 
       </div>
 
-      {/* Floating Bottom Left Corner: Copyright */}
-      <div className="absolute px-6 left-8 bottom-6 z-30 hidden lg:block text-[9px] font-heading tracking-[0.2em] text-white/40 uppercase">
-        © {new Date().getFullYear()} — ZERO GRAVITY PHOTOGRAPHY
+      {/* Floating Bottom Left Corner: Copyright wrapped in transparent glass pill */}
+      <div className="absolute left-8 bottom-6 z-30 hidden lg:block select-none">
+        <div className="bg-white/10 border border-white/20 shadow-lg rounded-full py-1.5 px-4 text-[9px] font-heading tracking-[0.2em] text-white/80 uppercase font-bold">
+          © {new Date().getFullYear()} — ZERO GRAVITY PHOTOGRAPHY
+        </div>
       </div>
 
-      {/* Floating Bottom Right Corner: Horizontal Social Icons */}
-      <div className="absolute px-6 right-8 bottom-6 z-30 hidden lg:flex items-center space-x-4 text-white/50">
-        <a href="#instagram" className="hover:text-brand-pink transition-colors p-1"><Instagram className="w-3.5 h-3.5" /></a>
-        <a href="#facebook" className="hover:text-brand-pink transition-colors p-1"><Facebook className="w-3.5 h-3.5" /></a>
-        <a href="#twitter" className="hover:text-brand-pink transition-colors p-1"><Twitter className="w-3.5 h-3.5" /></a>
-        <a href="#linkedin" className="hover:text-brand-pink transition-colors p-1"><Linkedin className="w-3.5 h-3.5" /></a>
+      {/* Floating Bottom Right Corner: Horizontal Social Icons wrapped in transparent glass pill */}
+      <div className="absolute right-8 bottom-6 z-30 hidden lg:flex items-center space-x-2 bg-white/10 border border-white/20 shadow-lg rounded-full py-1.5 px-4 text-white/80">
+        <a href="#instagram" className="hover:text-brand-pink transition-colors p-1" title="Instagram"><Instagram className="w-3.5 h-3.5" /></a>
+        <a href="#facebook" className="hover:text-brand-pink transition-colors p-1" title="Facebook"><Facebook className="w-3.5 h-3.5" /></a>
+        <a href="#twitter" className="hover:text-brand-pink transition-colors p-1" title="Twitter"><Twitter className="w-3.5 h-3.5" /></a>
+        <a href="#linkedin" className="hover:text-brand-pink transition-colors p-1" title="LinkedIn"><Linkedin className="w-3.5 h-3.5" /></a>
       </div>
 
     </div>
