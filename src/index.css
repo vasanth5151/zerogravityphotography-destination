@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #E5A9B4;
+  --color-brand-pink-dark: #C87B8B;
+  --color-brand-pink-light: #FCEFF1;
+  --color-brand-gold: #C8A96B;
+  --color-bg-dark: #FAF8F6;
+  --color-bg-card: #FFFFFF;
+  --color-text-light: #111111;
+  --color-text-muted: #707070;
+  
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5A9B4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C87B8B;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(229, 169, 180, 0.4);
+  color: #111111;
+}
+
+body {
+  background-color: #FAF8F6;
+  color: #111111;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override default #root settings from Vite */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-inline: none;
+  min-height: 100vh;
+  display: block;
+}
+
+/* Swiper overrides */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.3) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #E5A9B4 !important;
+  transform: scale(1.2);
+}
+
+/* Custom cursor lens style */
+.cursor-lens {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid #E5A9B4;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1), height 0.25s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.25s ease;
+}
+
+.cursor-lens.active {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(229, 169, 180, 0.15);
+  border-color: #C87B8B;
+}
+
+/* Parallax image zoom-in effect */
+.parallax-bg {
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hover-trigger:hover .parallax-bg {
+  transform: scale(1.06);
+}
+
+/* No-scroll class for Home page slider */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
