@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Calendar, User, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { blogPosts } from '../../data/mockData';
 import Footer from '../../components/Footer/Footer';
+import Ajay from '../../assets/Ajay.webp';
 
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -108,7 +109,7 @@ export default function Blog() {
                         </h2>
 
                         {/* Content Excerpt */}
-                        <p className="text-xs text-text-muted font-light leading-relaxed">
+                        <p className="text-sm text-text-muted font-light leading-relaxed">
                           {post.excerpt}
                         </p>
 
@@ -141,9 +142,9 @@ export default function Blog() {
                   {/* Pagination placeholder */}
                   {filteredPosts.length > 0 && (
                     <div className="pt-8 flex justify-center space-x-2">
-                      <span className="w-8 h-8 rounded-full border-2 border-brand-pink flex items-center justify-center text-xs font-heading font-semibold text-brand-pink bg-brand-pink/10">1</span>
-                      <span className="w-8 h-8 rounded-full border border-black/10 hover:border-brand-pink flex items-center justify-center text-xs font-heading font-semibold text-black hover:text-brand-pink cursor-pointer transition-all">2</span>
-                      <span className="w-8 h-8 rounded-full border border-black/10 hover:border-brand-pink flex items-center justify-center text-xs font-heading font-semibold text-black hover:text-brand-pink cursor-pointer transition-all">&gt;</span>
+                      <span className="w-8 h-8 rounded-full border-2 border-brand-pink flex items-center justify-center text-sm font-heading font-semibold text-brand-pink bg-brand-pink/10">1</span>
+                      <span className="w-8 h-8 rounded-full border border-black/10 hover:border-brand-pink flex items-center justify-center text-sm font-heading font-semibold text-black hover:text-brand-pink cursor-pointer transition-all">2</span>
+                      <span className="w-8 h-8 rounded-full border border-black/10 hover:border-brand-pink flex items-center justify-center text-sm font-heading font-semibold text-black hover:text-brand-pink cursor-pointer transition-all">&gt;</span>
                     </div>
                   )}
                 </motion.div>
@@ -180,7 +181,7 @@ export default function Blog() {
                     {selectedPost.title}
                   </h1>
 
-                  <div className="text-xs text-text-muted font-light leading-relaxed space-y-6 border-t border-black/5 pt-6">
+                  <div className="text-sm text-text-muted font-light leading-relaxed space-y-6 border-t border-black/5 pt-6">
                     <p className="first-letter:text-5xl first-letter:font-heading first-letter:float-left first-letter:mr-3 first-letter:text-brand-pink first-letter:font-light">
                       {selectedPost.content}
                     </p>
@@ -201,25 +202,25 @@ export default function Blog() {
             
             {/* ABOUT WIDGET */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm text-center space-y-4">
-              <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 About
               </h3>
               <div className="w-20 h-20 rounded-full overflow-hidden mx-auto border-2 border-brand-pink/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" 
-                  alt="Aria biography avatar" 
+                  src={Ajay} 
+                  alt="Ajay Benjamin biography avatar" 
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h4 className="font-heading text-sm text-black font-semibold">Aria Montgomery</h4>
+              <h4 className="font-heading text-sm text-black font-semibold">Ajay Benjamin</h4>
               <p className="text-[11px] text-text-muted font-light leading-relaxed">
-                Since today, film photography has already become basically history, then we will continue to talk about digital photography.
+                An engineer turned photographer and storyteller. Ajay Benjamin is the creative force behind Zero Gravity Photography, capturing timeless wedding stories and raw editorial emotions globally.
               </p>
             </div>
 
             {/* SEARCH WIDGET */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm space-y-4">
-              <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 Search
               </h3>
               <div className="relative">
@@ -236,10 +237,10 @@ export default function Blog() {
 
             {/* CATEGORIES LIST */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm space-y-4">
-              <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 Categories
               </h3>
-              <ul className="space-y-2 text-xs font-light text-text-muted font-heading">
+              <ul className="space-y-2 text-sm font-light text-text-muted font-heading">
                 {[
                   { name: 'All Collections', value: 'all', count: blogPosts.length },
                   { name: 'Planning Vows', value: 'planning', count: 1 },
@@ -269,7 +270,7 @@ export default function Blog() {
 
             {/* LATEST POSTS */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm space-y-4">
-              <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 Latest Posts
               </h3>
               <div className="space-y-4">
@@ -295,7 +296,7 @@ export default function Blog() {
 
             {/* TAG CLOUD */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm space-y-4">
-              <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 Tags
               </h3>
               <div className="flex flex-wrap gap-2">

@@ -104,7 +104,9 @@ export default function App() {
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
           <Route path="/destination" element={<PageWrapper><Destination /></PageWrapper>} />
+          <Route path="/destination/:loc" element={<PageWrapper><Destination /></PageWrapper>} />
           <Route path="/galleries" element={<PageWrapper><Galleries /></PageWrapper>} />
+          <Route path="/galleries/:tab" element={<PageWrapper><Galleries /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
         </Routes>

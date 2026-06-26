@@ -13,9 +13,24 @@ import {
   Instagram,
   Facebook,
   Twitter,
-  Linkedin
+  Youtube,
+  X
 } from 'lucide-react';
 import { heroSlides } from '../../data/mockData';
+
+const Pinterest = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 16 16"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.3"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+  </svg>
+);
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -180,7 +195,7 @@ export default function Home() {
           <div className="w-[1px] h-6 bg-white/20" />
 
           <div className="text-left font-heading">
-            <div className="text-xs font-bold text-white tracking-widest uppercase">
+            <div className="text-sm font-bold text-white tracking-widest uppercase">
               {currentSlide.title}
             </div>
             <div className="text-[9px] text-white/70 tracking-[0.2em] uppercase mt-1 font-semibold">
@@ -230,7 +245,7 @@ export default function Home() {
         <div className="flex items-center space-x-6 bg-white/10 border border-white/20 shadow-lg rounded-full p-2 pl-6 select-none w-full md:w-auto justify-between md:justify-end">
           {/* Slider Line Indicator */}
           <div className="flex items-center space-x-4">
-            <span className="text-xs font-heading font-bold tracking-widest text-brand-pink">
+            <span className="text-sm font-heading font-bold tracking-widest text-brand-pink">
               {formatNumber(currentIndex + 1)}
             </span>
             <div className="w-20 md:w-32 h-[1px] bg-white/20 relative">
@@ -241,7 +256,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
               />
             </div>
-            <span className="text-xs font-heading tracking-widest text-white/60 font-semibold">
+            <span className="text-sm font-heading tracking-widest text-white/60 font-semibold">
               {formatNumber(heroSlides.length)}
             </span>
           </div>
@@ -269,10 +284,11 @@ export default function Home() {
 
       {/* Floating Bottom Right Corner: Horizontal Social Icons wrapped in transparent glass pill */}
       <div className="absolute right-8 bottom-6 z-30 hidden lg:flex items-center space-x-2 bg-white/10 border border-white/20 shadow-lg rounded-full py-1.5 px-4 text-white/80">
-        <a href="#instagram" className="hover:text-brand-pink transition-colors p-1" title="Instagram"><Instagram className="w-3.5 h-3.5" /></a>
-        <a href="#facebook" className="hover:text-brand-pink transition-colors p-1" title="Facebook"><Facebook className="w-3.5 h-3.5" /></a>
-        <a href="#twitter" className="hover:text-brand-pink transition-colors p-1" title="Twitter"><Twitter className="w-3.5 h-3.5" /></a>
-        <a href="#linkedin" className="hover:text-brand-pink transition-colors p-1" title="LinkedIn"><Linkedin className="w-3.5 h-3.5" /></a>
+        <a href="https://www.instagram.com/zerogravityphotography/" className="hover:text-brand-pink transition-colors p-1" title="Instagram"><Instagram className="w-3.5 h-3.5" /></a>
+        <a href="https://www.facebook.com/zerogravitystudios/" className="hover:text-brand-pink transition-colors p-1" title="Facebook"><Facebook className="w-3.5 h-3.5" /></a>
+        <a href="https://x.com/zerogravityfoto" className="hover:text-brand-pink transition-colors p-1" title="Twitter"><X className="w-3.5 h-3.5" /></a>
+        <a href="https://www.youtube.com/c/ZeroGravityPhotography" className="hover:text-brand-pink transition-colors p-1" title="Youtube"><Youtube className="w-3.5 h-3.5" /></a>
+        <a href="https://in.pinterest.com/zerogravityphotography/" className="hover:text-brand-pink transition-colors p-1" title="Pinterest"><Pinterest className="w-3.5 h-3.5" /></a>
       </div>
 
     </div>

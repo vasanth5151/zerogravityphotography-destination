@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Star, ChevronLeft, ChevronRight, Calendar, Clock, Users, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Star, ChevronLeft, ChevronRight, Calendar, Clock, Users, ArrowRight, Eye, Play } from 'lucide-react';
 import Footer from '../../components/Footer/Footer';
+import contactInsta from '../../assets/contact-insta.webp';
 
 const TESTIMONIALS = [
   {
-    quote: "Zero Gravity Photography captured our wedding in Jaipur with absolute perfection. Every detail, from the royal palace backdrop to the candid tears, was portrayed with editorial elegance. The team is extremely professional and their artistic direction is second to none.",
-    couple: "Aditi & Rahul",
-    location: "Jaipur Palace, India",
+    quote: "Zero Gravity flew all the way to London for our wedding at The Savoy, and the results were absolutely breathtaking. Every candid shot captured the emotion of the day perfectly — from the nervous preparation moments to the joyful first dance. Our South Indian family traditions were documented with such care and respect. Truly exceptional work!",
+    couple: "Deepa & James",
+    location: "The Savoy, London, UK",
     rating: 5
   },
   {
-    quote: "An absolute dream to work with! They documented our beach wedding in Goa with cinematic finesse. The shots are light, airy, and full of raw emotion. We will cherish these timeless frames forever.",
-    couple: "Sneha & Keith",
-    location: "Goa Beachfront Resort, India",
+    quote: "We had our wedding in New Jersey with 400 guests and Zero Gravity handled it all flawlessly. The drone footage of our outdoor ceremony was cinematic beyond words. They blended into the crowd so naturally — not a single posed moment, just pure genuine emotion in every frame. Worth every penny for an international team.",
+    couple: "Priya & Karthik",
+    location: "Park Chateau Estate, New Jersey, USA",
     rating: 5
   },
   {
-    quote: "Their fine-art documentary style is unparalleled. They travelled to Kerala for our backwater destination wedding and delivered shots that look straight out of a luxury magazine. Truly outstanding work!",
-    couple: "Meera & Arjun",
-    location: "Kumarakom Lake Resort, Kerala",
+    quote: "From Edinburgh to Chennai, Zero Gravity has been the name on every Indian family's lips for UK weddings. They covered our Scottish castle ceremony and the subsequent reception with equal brilliance. The cinematic film they delivered brought us to tears. Professional, creative, and genuinely passionate about what they do.",
+    couple: "Ananya & Rohan",
+    location: "Dundas Castle, Edinburgh, UK",
     rating: 5
   }
 ];
@@ -76,7 +77,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-bg-dark pt-24 text-black font-body">
-      
+
       {/* Banner Header */}
       <section className="relative h-[35vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
@@ -97,7 +98,7 @@ export default function Contact() {
 
       {/* Main Grid Info Area */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 space-y-20">
-        
+
         {/* Three Columns Info Grid */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white border border-black/5 p-8 rounded-2xl shadow-sm">
           {/* Card 1: Email */}
@@ -105,10 +106,10 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-full bg-brand-pink/10 flex items-center justify-center text-brand-pink">
               <Mail className="w-5 h-5" />
             </div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-black">
+            <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-black">
               Send Email
             </h3>
-            <div className="text-xs text-text-muted font-light space-y-1">
+            <div className="text-sm text-text-muted font-light space-y-1">
               <p>info@zerogravityphotography.com</p>
               <p>bookings@zerogravityphotography.com</p>
             </div>
@@ -119,7 +120,7 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-full bg-brand-pink/10 flex items-center justify-center text-brand-pink">
               <Phone className="w-5 h-5" />
             </div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-black">
+            <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-black">
               Call Us
             </h3>
             <div className="text-sm font-semibold text-black tracking-wide">
@@ -132,10 +133,10 @@ export default function Contact() {
             <div className="w-12 h-12 rounded-full bg-brand-pink/10 flex items-center justify-center text-brand-pink">
               <MapPin className="w-5 h-5" />
             </div>
-            <h3 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-black">
+            <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-black">
               Visit Us
             </h3>
-            <p className="text-xs text-text-muted font-light max-w-[200px] leading-relaxed">
+            <p className="text-sm text-text-muted font-light max-w-[200px] leading-relaxed">
               Chennai Head Office, Zero Gravity Photography, Nungambakkam, Chennai - 600034
             </p>
           </div>
@@ -147,7 +148,7 @@ export default function Contact() {
             <h2 className="font-heading text-2xl md:text-3xl font-light tracking-wide uppercase text-black">
               Book Your Story
             </h2>
-            <p className="text-xs text-text-muted font-light">
+            <p className="text-sm text-text-muted font-light">
               Fill out the details below to check availability for your destination wedding or shoot.
             </p>
           </div>
@@ -156,13 +157,13 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="bg-brand-pink/10 border border-brand-pink/20 rounded-xl p-8 text-center text-brand-pink-dark font-medium text-xs uppercase tracking-wider"
+              className="bg-brand-pink/10 border border-brand-pink/20 rounded-xl p-8 text-center text-brand-pink-dark font-medium text-sm uppercase tracking-wider"
             >
               Thank you! Your inquiry has been sent successfully. We will get in touch shortly.
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              
+            <form onSubmit={handleSubmit} className="space-y-6 text-left">
+
               {/* Row 1: Name, Email, Phone */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-1">
@@ -174,7 +175,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter your full name"
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
                 <div className="space-y-1">
@@ -186,7 +187,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter email address"
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
                 <div className="space-y-1">
@@ -198,7 +199,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Enter mobile number"
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
               </div>
@@ -214,7 +215,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Your Current City"
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
                 <div className="space-y-1">
@@ -224,7 +225,7 @@ export default function Contact() {
                     value={formData.event}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black font-medium shadow-sm cursor-pointer"
                   >
                     <option value="Wedding">Destination Wedding</option>
                     <option value="Pre-Wedding">Pre-Wedding Shoot</option>
@@ -241,7 +242,7 @@ export default function Contact() {
                     value={formData.date}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm font-medium shadow-sm"
                   />
                 </div>
               </div>
@@ -257,7 +258,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Venue / City / Country"
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
                 <div className="space-y-1">
@@ -268,7 +269,7 @@ export default function Contact() {
                     value={formData.time}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm font-medium shadow-sm"
                   />
                 </div>
                 <div className="space-y-1">
@@ -281,7 +282,7 @@ export default function Contact() {
                     placeholder="Approx. guest count"
                     required
                     min="1"
-                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
+                    className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm"
                   />
                 </div>
               </div>
@@ -296,7 +297,7 @@ export default function Contact() {
                   placeholder="Tell us more about your love story, themes, or custom requests..."
                   rows="5"
                   required
-                  className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-xs outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm resize-none"
+                  className="w-full bg-white border border-black/10 focus:border-brand-pink rounded-lg py-3 px-4 text-sm outline-none transition-colors text-black placeholder:text-black/35 font-medium shadow-sm resize-none"
                 />
               </div>
 
@@ -314,14 +315,56 @@ export default function Contact() {
           )}
         </section>
 
+        {/* INSTAGRAM ACHIEVEMENTS SECTION */}
+        <section className="pt-16 border-t border-black/5 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side: Instagram Account Profile Image */}
+          <div className="bg-white border border-black/5 rounded-2xl p-4 shadow-sm flex items-center justify-center">
+            <img
+              src={contactInsta}
+              alt="Instagram Profile and Achievements"
+              className="w-full h-auto rounded-xl object-contain"
+            />
+          </div>
+
+          {/* Right Side: Instagram Text & demography specs */}
+          <div className="space-y-8 text-left">
+            <div className="space-y-2">
+              <span className="text-[10px] font-heading tracking-[0.3em] text-brand-pink uppercase font-semibold">Social Influence</span>
+              <h2 className="font-heading text-3xl md:text-4xl font-light text-black tracking-widest uppercase">
+                INSTAGRAM
+              </h2>
+              <div className="w-12 h-[1px] bg-brand-pink" />
+            </div>
+
+            <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              <div>
+                <span className="text-[9px] font-heading tracking-widest text-neutral-400 uppercase">Followers</span>
+                <h4 className="font-heading text-2xl font-light text-black mt-0.5">696K</h4>
+              </div>
+              <div>
+                <span className="text-[9px] font-heading tracking-widest text-neutral-400 uppercase">Reach</span>
+                <h4 className="font-heading text-2xl font-light text-black mt-0.5">696K <span className="text-[10px] text-neutral-400 font-normal">Views/Month</span></h4>
+              </div>
+              <div>
+                <span className="text-[9px] font-heading tracking-widest text-neutral-400 uppercase">Audience Gender</span>
+                <h4 className="font-heading text-2xl font-light text-black mt-0.5">78% <span className="text-[10px] text-neutral-400 font-normal">Women</span></h4>
+              </div>
+              <div>
+                <span className="text-[9px] font-heading tracking-widest text-neutral-400 uppercase">Audience Age</span>
+                <h4 className="font-heading text-2xl font-light text-black mt-0.5">25-34 <span className="text-[10px] text-neutral-400 font-normal">(41% of Audience)</span></h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION: Luxury Testimonials Slider */}
         <section className="py-16 border-t border-black/5 bg-white rounded-2xl border border-black/5 p-8 shadow-sm">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <span className="text-[10px] font-heading tracking-[0.3em] text-brand-pink uppercase font-semibold">Kind Words</span>
-            
+
             {/* Big quote mark icon */}
             <div className="flex justify-center">
-              <span className="text-6xl font-serif text-brand-pink select-none">“</span>
+              <span className="text-6xl font-serif text-brand-pink select-none leading-none">“</span>
             </div>
 
             {/* Carousel quotes */}
@@ -339,14 +382,14 @@ export default function Contact() {
                     {TESTIMONIALS[activeTestimonial].quote}
                   </p>
                   <div className="space-y-1">
-                    <h4 className="font-heading text-xs font-semibold tracking-wider text-black">
+                    <h4 className="font-heading text-sm font-semibold tracking-wider text-black">
                       {TESTIMONIALS[activeTestimonial].couple}
                     </h4>
-                    <p className="text-[10px] text-brand-pink-dark tracking-widest uppercase">
+                    <p className="text-[10px] text-brand-pink-dark tracking-widest uppercase font-semibold">
                       {TESTIMONIALS[activeTestimonial].location}
                     </p>
                   </div>
-                  
+
                   {/* Stars Rating */}
                   <div className="flex justify-center gap-1">
                     {[...Array(TESTIMONIALS[activeTestimonial].rating)].map((_, i) => (
@@ -383,13 +426,13 @@ export default function Contact() {
       {/* Full-Width Maps Frame at the very bottom with light pink border line */}
       <section className="w-full px-6 md:px-12 py-8 bg-white border-t border-black/5 mt-16 flex flex-col items-center">
         <div className="w-full max-w-7xl border-4 border-brand-pink p-2 bg-white rounded-2xl overflow-hidden shadow-lg">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4622.078958875185!2d80.24200035445166!3d13.055417376145295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526644fb145589%3A0xecc6216b122e39a!2sZero%20Gravity%20Photography%20-%20Wedding%20Photography%20In%20Chennai!5e0!3m2!1sen!2sin!4v1782391740014!5m2!1sen!2sin" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4622.078958875185!2d80.24200035445166!3d13.055417376145295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526644fb145589%3A0xecc6216b122e39a!2sZero%20Gravity%20Photography%20-%20Wedding%20Photography%20In%20Chennai!5e0!3m2!1sen!2sin!4v1782391740014!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
             title="Zero Gravity Chennai Head Office Map"
           />
