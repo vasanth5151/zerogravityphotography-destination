@@ -98,7 +98,7 @@ export default function About() {
             <h2 className="font-body text-3xl md:text-4xl font-light text-black leading-tight">
               We Don't Just Take Photos. <span className="text-brand-pink">We Capture Souls.</span>
             </h2>
-            <p className="text-text-muted text-xs md:text-sm font-body leading-relaxed">
+            <p className="text-text-muted text-[15px] font-body leading-relaxed">
               An engineer turned photographer, Ajay Kumar founded Zero Gravity Photography with one belief — every wedding has a story waiting to be told. What began as a creative passion in Chennai quickly grew into one of India's most sought-after wedding photography studios, now operating globally across the UK, USA, Europe, Southeast Asia, and the Middle East.
               Ajay's candid, documentary-driven approach means no excessive posing, no artificial moments — just genuine emotions, beautifully preserved. Today, Zero Gravity travels to English heritage estates, Scottish Highland castles, New York rooftop venues, California vineyards, and Parisian gardens to document love stories from the Indian diaspora and couples worldwide. Email: ajay@zgstudios.com
             </p>
@@ -107,11 +107,11 @@ export default function About() {
             <div className="pt-4 grid grid-cols-2 gap-6 border-t border-black/5">
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Mission</h4>
-                <p className="text-sm text-text-muted font-normal leading-relaxed">To document your wedding — whether in London, New York, Bali, or Chennai — with candid storytelling that captures real emotions and creates a legacy you will treasure for generations.</p>
+                <p className="text-[15px] text-text-muted font-normal leading-relaxed">To document your wedding — whether in London, New York, Bali, or Chennai — with candid storytelling that captures real emotions and creates a legacy you will treasure for generations.</p>
               </div>
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Vision</h4>
-                <p className="text-sm text-text-muted font-normal leading-relaxed">To be the most trusted international wedding photography studio for the global Indian diaspora and couples seeking authentic, fine-art documentary coverage worldwide.</p>
+                <p className="text-[15px] text-text-muted font-normal leading-relaxed">To be the most trusted international wedding photography studio for the global Indian diaspora and couples seeking authentic, fine-art documentary coverage worldwide.</p>
               </div>
             </div>
           </motion.div>
@@ -163,7 +163,7 @@ export default function About() {
 
               {/* Content */}
               <h3 className="font-heading text-xl font-light text-black mb-2">{event.title}</h3>
-              <p className="text-sm text-text-muted font-light leading-relaxed max-w-2xl">{event.desc}</p>
+              <p className="text-[15px] text-text-muted font-light leading-relaxed max-w-2xl">{event.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function About() {
                     {member.role}
                   </span>
                   <h3 className="font-heading text-lg font-light text-black">{member.name}</h3>
-                  <p className="text-sm text-text-muted font-light leading-relaxed">{member.bio}</p>
+                  <p className="text-[15px] text-text-muted font-light leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>
             ))}
@@ -213,7 +213,7 @@ export default function About() {
           <div className="lg:col-span-1 space-y-4">
             <p className="text-[10px] font-heading tracking-[0.25em] text-brand-pink uppercase font-semibold">Global Recognition</p>
             <h2 className="font-heading text-3xl font-light text-black leading-tight">Awards & Accolades</h2>
-            <p className="text-sm text-text-muted font-light leading-relaxed">
+            <p className="text-[15px] text-text-muted font-light leading-relaxed">
               Our work across the UK, USA, Europe, and Asia has earned recognition from leading wedding industry bodies, publications, and couple communities worldwide.
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function About() {
           <h2 className="font-heading text-3xl md:text-5xl font-light text-black">
             We Travel Everywhere Your Love Story Takes Us
           </h2>
-          <p className="text-sm text-text-muted max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-[15px] text-text-muted max-w-xl mx-auto font-light leading-relaxed">
             From London to Los Angeles, from Edinburgh to New York — Zero Gravity Photography documents destination weddings across the globe. Reach out to check availability for your date and destination.
           </p>
           <div className="pt-4">

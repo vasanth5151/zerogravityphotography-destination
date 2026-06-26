@@ -149,7 +149,7 @@ export default function Galleries() {
               <h1 className="font-heading text-4xl md:text-5xl font-light tracking-wide uppercase text-neutral-900">
                 Our Gallery Collections
               </h1>
-              <p className="text-sm font-light leading-relaxed text-neutral-500">
+              <p className="text-[15px] font-light leading-relaxed text-neutral-500">
                 Each wedding is a unique manuscript. Step into our world of cinematic imagery, structured fine-art portraiture, and documentary moments.
               </p>
             </div>
@@ -211,7 +211,7 @@ export default function Galleries() {
                     <h3 className="font-heading text-2xl font-light text-white tracking-wide uppercase pt-1">
                       {category.title}
                     </h3>
-                    <p className="text-xs text-neutral-300 font-light leading-relaxed max-w-sm">
+                    <p className="text-[15px] text-neutral-300 font-light leading-relaxed max-w-sm">
                       {category.desc}
                     </p>
                     <div className="pt-2">
@@ -272,7 +272,7 @@ export default function Galleries() {
               <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide uppercase">
                 {styles.title}
               </h2>
-              <p className="text-xs font-light leading-relaxed opacity-75">
+              <p className="text-[15px] font-light leading-relaxed text-neutral-500">
                 {styles.desc}
               </p>
             </div>
@@ -456,7 +456,7 @@ export default function Galleries() {
                   <h2 className="font-heading text-3xl md:text-4xl font-light text-black tracking-widest uppercase">
                     IN THE DARK
                   </h2>
-                  <p className="text-xs font-light text-neutral-500 leading-relaxed max-w-4xl mt-3">
+                  <p className="text-[15px] font-light text-neutral-500 leading-relaxed max-w-4xl mt-3">
                     From the filmmakers and sound engineers capturing the next generation of visual memory. We provide elegant moving solutions that set new standards for luxury wedding cinema. Digital technology has made our world more connected, but raw emotional storytelling is what truly sets us apart.
                   </p>
                 </div>

@@ -78,7 +78,7 @@ export default function Services() {
           We Travel The World For Your Wedding
         </h1>
         <div className="w-12 h-[1px] bg-brand-pink/50 mx-auto" />
-        <p className="text-sm font-light text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-[15px] font-light text-neutral-500 leading-relaxed max-w-2xl mx-auto">
           Zero Gravity Photography specialises in international wedding photography across the UK, USA, Europe, Southeast Asia, and the Middle East. From candid documentary coverage to full wedding management, we bring the same storytelling passion to a London church, a New York rooftop, or a Bali clifftop — wherever your love story unfolds.
         </p>
       </section>
@@ -133,7 +133,7 @@ export default function Services() {
                   </p>
                 </div>
 
-                <p className="text-sm font-light text-neutral-500 leading-relaxed">
+                <p className="text-[15px] font-light text-neutral-500 leading-relaxed">
                   {service.desc}
                 </p>
 
@@ -163,7 +163,7 @@ export default function Services() {
           <h2 className="font-heading text-3xl md:text-5xl font-light text-black">
             Available For International Bookings Worldwide
           </h2>
-          <p className="text-sm text-text-muted max-w-xl mx-auto font-light leading-relaxed">
+          <p className="text-[15px] text-text-muted max-w-xl mx-auto font-light leading-relaxed">
             We cover weddings across the United Kingdom, United States, Canada, Australia, Europe, Southeast Asia, and the Middle East. Our team travels to your destination — bringing our full storytelling expertise wherever your celebration takes place.
           </p>
           <div className="pt-4">

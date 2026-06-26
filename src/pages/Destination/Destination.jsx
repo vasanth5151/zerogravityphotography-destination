@@ -673,7 +673,7 @@ export default function Destination() {
                   {profile.tagline}
                 </p>
                 <div className="w-12 h-[1px] bg-brand-pink" />
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                <p className="text-[15px] text-text-muted font-light leading-relaxed">
                   {profile.intro}
                 </p>
 
@@ -850,7 +850,7 @@ export default function Destination() {
           <span className="text-[10px] font-heading tracking-[0.3em] text-brand-pink uppercase font-semibold">Fine-Art Locations</span>
           <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide text-neutral-900 uppercase">Popular Wedding Destinations</h2>
           <div className="w-12 h-[1px] bg-brand-pink mx-auto mt-4" />
-          <p className="text-sm text-neutral-500 font-light max-w-xl mx-auto mt-4 leading-relaxed">
+          <p className="text-[15px] text-text-muted font-light max-w-xl mx-auto mt-4 leading-relaxed">
             Handpicked destinations where every backdrop tells a love story. From tropical cliffs to royal palaces.
           </p>
         </div>
@@ -963,10 +963,10 @@ export default function Destination() {
               <div className="w-10 h-[1px] bg-brand-pink" />
             </div>
 
-            <p className="text-neutral-600 text-sm font-light leading-relaxed">
+            <p className="text-[15px] text-text-muted font-light leading-relaxed">
               Our handpicked wedding venues span the continents, bringing you a diverse array of settings from all corners of the globe. We believe that every love story is unique, and that each couple deserves a venue that perfectly reflects their dreams.
             </p>
-            <p className="text-neutral-600 text-sm font-light leading-relaxed">
+            <p className="text-[15px] text-text-muted font-light leading-relaxed">
               Whether you've always envisioned your day in a romantic European castle, surrounded by lush vineyards, or beneath the palms on a secluded island paradise — our curated catalogue brings together the world's most extraordinary venues.
             </p>
 
@@ -1054,7 +1054,7 @@ export default function Destination() {
           <h2 className="font-heading text-3xl md:text-5xl font-light text-white tracking-wide uppercase leading-tight">
             Your Dream Wedding<br />Awaits Around The World
           </h2>
-          <p className="text-sm text-white/70 font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-[15px] text-white/70 font-light max-w-xl mx-auto leading-relaxed">
             Let us craft an extraordinary destination wedding experience tailored precisely to your vision, wherever in the world you wish to celebrate.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

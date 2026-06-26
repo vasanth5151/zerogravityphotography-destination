@@ -11,6 +11,7 @@ import Destination from './pages/Destination/Destination';
 import Galleries from './pages/Galleries/Galleries';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
+import ThankYou from './pages/ThankYou/ThankYou';
 
 // Scroll Restoration component to reset scroll position on transition
 function ScrollRestoration() {
@@ -45,8 +46,8 @@ function CustomCursor() {
         target.tagName === 'BUTTON' ||
         target.closest('a') ||
         target.closest('button') ||
-        target.classList.contains('cursor-pointer') ||
-        target.closest('.cursor-pointer')
+        target.closest('.cursor-pointer') ||
+        target.classList.contains('cursor-pointer')
       ) {
         cursor.classList.add('active');
       } else {
@@ -109,6 +110,7 @@ export default function App() {
           <Route path="/galleries/:tab" element={<PageWrapper><Galleries /></PageWrapper>} />
           <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          <Route path="/thank-you" element={<PageWrapper><ThankYou /></PageWrapper>} />
         </Routes>
       </AnimatePresence>
     </>

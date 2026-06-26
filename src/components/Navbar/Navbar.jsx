@@ -114,7 +114,7 @@ export default function Navbar() {
           </NavLink>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-5">
             {navLinks.map((link) => {
               if (link.name === 'Destination') {
                 return (
@@ -122,17 +122,17 @@ export default function Navbar() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 font-semibold ${isActive
+                        `relative py-2 text-[13px] font-heading tracking-[0.1em] uppercase transition-colors duration-300 font-medium ${isActive
                           ? 'text-brand-pink'
                           : isHomePage
-                            ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white/95 hover:text-white')
+                            ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white hover:text-white')
                             : 'text-black/90 hover:text-brand-pink'
                         }`
                       }
                     >
                       {link.name} +
                     </NavLink>
-                     {/* Dropdown Menu Container */}
+                    {/* Dropdown Menu Container */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white/95 backdrop-blur-md border border-black/5 rounded-xl shadow-xl p-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-left">
                         {destinations.map((loc) => {
@@ -158,10 +158,10 @@ export default function Navbar() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 font-semibold ${isActive
+                        `relative py-2 text-[13px] font-heading tracking-[0.1em] uppercase transition-colors duration-300 font-medium ${isActive
                           ? 'text-brand-pink'
                           : isHomePage
-                            ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white/95 hover:text-white')
+                            ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white hover:text-white')
                             : 'text-black/90 hover:text-brand-pink'
                         }`
                       }
@@ -205,10 +205,10 @@ export default function Navbar() {
                   key={link.name}
                   to={link.path}
                   className={({ isActive }) =>
-                    `relative py-2 text-[10px] font-heading tracking-[0.2em] uppercase transition-colors duration-300 font-semibold ${isActive
+                    `relative py-2 text-[13px] font-heading tracking-[0.1em] uppercase transition-colors duration-300 font-medium ${isActive
                       ? 'text-brand-pink'
                       : isHomePage
-                        ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white/95 hover:text-white')
+                        ? (isScrolled ? 'text-black/90 hover:text-brand-pink' : 'text-white hover:text-white')
                         : 'text-black/90 hover:text-brand-pink'
                     }`
                   }
@@ -225,8 +225,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsSearchOpen(true)}
               className={`p-2 transition-colors duration-300 ${isHomePage
-                  ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white/80 hover:text-brand-pink')
-                  : 'text-black/70 hover:text-brand-pink'
+                ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
+                : 'text-black/70 hover:text-brand-pink'
                 }`}
               aria-label="Search site"
             >
@@ -237,8 +237,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 transition-colors duration-300 ${isHomePage
-                  ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white/80 hover:text-brand-pink')
-                  : 'text-black/70 hover:text-brand-pink'
+                ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
+                : 'text-black/70 hover:text-brand-pink'
                 }`}
               aria-label="Toggle menu"
             >

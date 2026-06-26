@@ -35,30 +35,30 @@ export const heroSlides = [
     location: "New York, USA",
     year: "2025"
   },
-  {
-    id: 4,
-    image: herosectionImg4,
-    title: "Destination Weddings",
-    subtitle: "Your Love Story, Told Across The World",
-    location: "Paris, France",
-    year: "2025"
-  },
-  {
-    id: 5,
-    image: herosectionImg5,
-    title: "Candid Storytelling",
-    subtitle: "No Posing. Just Pure, Genuine Emotion.",
-    location: "Jaipur, India",
-    year: "2024"
-  },
-  {
-    id: 6,
-    image: herosectionImg6,
-    title: "Cinematic Wedding Films",
-    subtitle: "Hollywood-Grade Films of Your Special Day",
-    location: "Goa, India",
-    year: "2025"
-  },
+  // {
+  //   id: 4,
+  //   image: herosectionImg4,
+  //   title: "Destination Weddings",
+  //   subtitle: "Your Love Story, Told Across The World",
+  //   location: "Paris, France",
+  //   year: "2025"
+  // },
+  // {
+  //   id: 5,
+  //   image: herosectionImg5,
+  //   title: "Candid Storytelling",
+  //   subtitle: "No Posing. Just Pure, Genuine Emotion.",
+  //   location: "Jaipur, India",
+  //   year: "2024"
+  // },
+  // {
+  //   id: 6,
+  //   image: herosectionImg6,
+  //   title: "Cinematic Wedding Films",
+  //   subtitle: "Hollywood-Grade Films of Your Special Day",
+  //   location: "Goa, India",
+  //   year: "2025"
+  // },
   {
     id: 7,
     image: herosectionImg7,
@@ -75,43 +75,43 @@ export const heroSlides = [
     location: "Muscat, Oman",
     year: "2025"
   },
-  {
-    id: 9,
-    image: herosectionImg9,
-    title: "Fine-Art Portraits",
-    subtitle: "Light, Emotion & Artistic Vision",
-    location: "Singapore",
-    year: "2024"
-  },
-  {
-    id: 10,
-    image: herosectionImg1,
-    title: "South Asian Weddings UK",
-    subtitle: "Hindu, Muslim & Sikh Ceremonies in Britain",
-    location: "Birmingham, United Kingdom",
-    year: "2025"
-  },
-  {
-    id: 11,
-    image: herosectionImg4,
-    title: "NRI Wedding Photography",
-    subtitle: "Celebrating Indian Heritage Abroad",
-    location: "Toronto, Canada",
-    year: "2025"
-  },
-  {
-    id: 12,
-    image: herosectionImg6,
-    title: "International Luxury Weddings",
-    subtitle: "Crafted with Passion, Preserved with Art",
-    location: "Dubai, UAE",
-    year: "2025"
-  }
+  // {
+  //   id: 9,
+  //   image: herosectionImg9,
+  //   title: "Fine-Art Portraits",
+  //   subtitle: "Light, Emotion & Artistic Vision",
+  //   location: "Singapore",
+  //   year: "2024"
+  // },
+  // {
+  //   id: 10,
+  //   image: herosectionImg1,
+  //   title: "South Asian Weddings UK",
+  //   subtitle: "Hindu, Muslim & Sikh Ceremonies in Britain",
+  //   location: "Birmingham, United Kingdom",
+  //   year: "2025"
+  // },
+  // {
+  //   id: 11,
+  //   image: herosectionImg4,
+  //   title: "NRI Wedding Photography",
+  //   subtitle: "Celebrating Indian Heritage Abroad",
+  //   location: "Toronto, Canada",
+  //   year: "2025"
+  // },
+  // {
+  //   id: 12,
+  //   image: herosectionImg6,
+  //   title: "International Luxury Weddings",
+  //   subtitle: "Crafted with Passion, Preserved with Art",
+  //   location: "Dubai, UAE",
+  //   year: "2025"
+  // }
 ];
 
 export const aboutStats = [
-  { label: "Years of Experience", value: "12" },
-  { label: "Countries Covered", value: "18" },
+  { label: "Years of Experience", value: "16" },
+  { label: "Countries Covered", value: "12" },
   { label: "Happy Couples", value: "5000" },
   { label: "Instagram Followers (K)", value: "696" }
 ];

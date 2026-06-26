@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Star, ChevronLeft, ChevronRight, Calendar, Clock, Users, ArrowRight, Eye, Play } from 'lucide-react';
 import Footer from '../../components/Footer/Footer';
@@ -26,6 +27,7 @@ const TESTIMONIALS = [
 ];
 
 export default function Contact() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,10 +49,34 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.name && formData.email) {
-      setIsSubmitted(true);
+      // Build form submission payload to Web3Forms to send details to vasanthkumar5151@gmail.com and leadszg@gmail.com
+      const submissionData = {
+        // Form receiver configuration (Request an access key from web3forms.com to link emails)
+        access_key: "6b9915b5-e308-4b42-8d38-238bc43c1e28",
+        subject: `New Wedding Inquiry from ${formData.name}`,
+        from_name: "Zero Gravity Photography Portfolio",
+        to_email: "vasanthkumar5151@gmail.com, leadszg@gmail.com",
+        cc: "leadszg@gmail.com",
+        ...formData
+      };
+
+      try {
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify(submissionData)
+        });
+      } catch (err) {
+        console.error("Submission failed:", err);
+      }
+
+      // Reset form fields
       setFormData({
         name: '',
         email: '',
@@ -63,7 +89,9 @@ export default function Contact() {
         crowdstrength: '',
         message: ''
       });
-      setTimeout(() => setIsSubmitted(false), 5000);
+
+      // Redirect user to the beautiful thank you page
+      navigate('/thank-you');
     }
   };
 
@@ -322,7 +350,7 @@ export default function Contact() {
             <img
               src={contactInsta}
               alt="Instagram Profile and Achievements"
-              className="w-full h-auto rounded-xl object-contain"
+              className="w-full h-[800px] rounded-xl object-contain"
             />
           </div>
 
