@@ -13,10 +13,10 @@ import herosectionImg9 from "../assets/herosection/herosection-img-9.webp";
 export const heroSlides = [
   {
     id: 1,
-    image: herosectionImg1,
-    title: "Zero Gravity Photography",
-    subtitle: "India's Premier International Wedding Photographers",
-    location: "London, United Kingdom",
+    image: herosectionImg3,
+    title: "USA Wedding Photography",
+    subtitle: "New York, New Jersey, California & Beyond",
+    location: "New York, USA",
     year: "2025"
   },
   {
@@ -29,10 +29,10 @@ export const heroSlides = [
   },
   {
     id: 3,
-    image: herosectionImg3,
-    title: "USA Wedding Photography",
-    subtitle: "New York, New Jersey, California & Beyond",
-    location: "New York, USA",
+    image: herosectionImg1,
+    title: "Zero Gravity Photography",
+    subtitle: "India's Premier International Wedding Photographers",
+    location: "London, United Kingdom",
     year: "2025"
   },
   // {
