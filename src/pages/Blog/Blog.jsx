@@ -40,7 +40,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-bg-dark pt-24 text-black font-body">
-      
+
       {/* Blog Page Banner */}
       <section className="relative h-[35vh] md:h-[45vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
@@ -62,7 +62,7 @@ export default function Blog() {
       {/* Main Content Split Section (70/30) */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* LEFT COLUMN: 70% Width (Col span 8) */}
           <main className="lg:col-span-8 space-y-12">
             <AnimatePresence mode="wait">
@@ -101,7 +101,7 @@ export default function Blog() {
                         </div>
 
                         {/* Heading Title */}
-                        <h2 
+                        <h2
                           onClick={() => handleOpenPost(post)}
                           className="font-heading text-2xl md:text-3xl font-light text-black hover:text-brand-pink cursor-pointer transition-colors leading-tight"
                         >
@@ -124,7 +124,7 @@ export default function Blog() {
                           </button>
 
                           {/* Share Icon triggers mock clipboard copy */}
-                          <button 
+                          <button
                             onClick={() => {
                               navigator.clipboard.writeText(window.location.href + `/${post.id}`);
                               alert("Article link copied!");
@@ -189,7 +189,7 @@ export default function Blog() {
                       Designing a destination wedding photoshoot is about crafting cohesive styles. The choice of gowns, colors, and locations interact dynamically. High-end photography requires aligning light angles and timing. In places like Italy's Lake Como, the cliffs filter light dramatically, giving a unique visual aesthetic.
                     </p>
                     <p>
-                      Ultimately, standard poses fail to capture real memories. By introducing movement—such as having couples take a slow stroll or dance under the dusk skies—we invite natural expressions. The camera acts as a fine-art portal, capturing the quiet gestures and pure romance that define destination weddings.
+                      Ultimately, standard poses fail to capture real memories. By introducing movement such as having couples take a slow stroll or dance under the dusk skies we invite natural expressions. The camera acts as a fine-art portal, capturing the quiet gestures and pure romance that define destination weddings.
                     </p>
                   </div>
                 </motion.div>
@@ -199,17 +199,17 @@ export default function Blog() {
 
           {/* RIGHT COLUMN: 30% Width (Col span 4 Sidebar) */}
           <aside className="lg:col-span-4 space-y-10">
-            
+
             {/* ABOUT WIDGET */}
             <div className="bg-white border border-black/5 rounded-2xl p-6 shadow-sm text-center space-y-4">
               <h3 className="font-heading text-sm font-semibold uppercase tracking-[0.25em] text-brand-pink border-b border-black/5 pb-3">
                 About
               </h3>
               <div className="w-20 h-20 rounded-full overflow-hidden mx-auto border-2 border-brand-pink/20">
-                <img 
-                  src={Ajay} 
-                  alt="Ajay Benjamin biography avatar" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={Ajay}
+                  alt="Ajay Benjamin biography avatar"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h4 className="font-heading text-sm text-black font-semibold">Ajay Benjamin</h4>
@@ -254,9 +254,8 @@ export default function Blog() {
                         setActiveCategory(cat.value);
                         setSelectedPost(null);
                       }}
-                      className={`hover:text-brand-pink text-left transition-colors font-medium ${
-                        activeCategory === cat.value ? 'text-brand-pink font-semibold' : ''
-                      }`}
+                      className={`hover:text-brand-pink text-left transition-colors font-medium ${activeCategory === cat.value ? 'text-brand-pink font-semibold' : ''
+                        }`}
                     >
                       {cat.name}
                     </button>
@@ -275,8 +274,8 @@ export default function Blog() {
               </h3>
               <div className="space-y-4">
                 {blogPosts.slice(0, 3).map((post) => (
-                  <div 
-                    key={post.id} 
+                  <div
+                    key={post.id}
                     onClick={() => handleOpenPost(post)}
                     className="flex items-center space-x-3 cursor-pointer group"
                   >
@@ -307,11 +306,10 @@ export default function Blog() {
                       setActiveTag(activeTag === tag ? null : tag);
                       setSelectedPost(null);
                     }}
-                    className={`text-[9px] font-heading tracking-wider uppercase border rounded px-3 py-1.5 transition-all ${
-                      activeTag === tag
-                        ? 'bg-brand-pink text-bg-dark border-brand-pink font-semibold'
-                        : 'border-black/10 hover:border-brand-pink/40 text-black/70'
-                    }`}
+                    className={`text-[9px] font-heading tracking-wider uppercase border rounded px-3 py-1.5 transition-all ${activeTag === tag
+                      ? 'bg-brand-pink text-bg-dark border-brand-pink font-semibold'
+                      : 'border-black/10 hover:border-brand-pink/40 text-black/70'
+                      }`}
                   >
                     #{tag}
                   </button>
@@ -320,7 +318,7 @@ export default function Blog() {
             </div>
 
           </aside>
-          
+
         </div>
       </div>
 

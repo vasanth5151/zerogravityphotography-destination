@@ -4,7 +4,7 @@ import { Camera, ArrowRight, Heart, Instagram, Facebook } from 'lucide-react';
 
 const PinterestIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0" />
   </svg>
 );
 
@@ -29,8 +29,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-black/5 pt-16 pb-8 px-6 md:px-12 text-black">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
+
         {/* Brand Description */}
         <div className="flex flex-col space-y-6">
           <div className="flex items-center space-x-3">
@@ -39,7 +39,7 @@ export default function Footer() {
               ZERO GRAVITY PHOTOGRAPHY<span className="text-brand-pink font-semibold">.</span>
             </span>
           </div>
-          <p className="text-xs text-text-muted font-light leading-relaxed">
+          <p className="text-[13px] text-text-muted font-light leading-relaxed">
             Capturing timeless romance and raw editorial elegance. Based in Europe, traveling globally for luxury destination weddings.
           </p>
           <div className="flex space-x-3.5">
@@ -91,7 +91,7 @@ export default function Footer() {
           <h4 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink mb-6">
             Explore
           </h4>
-          <ul className="space-y-3 text-xs font-light text-text-muted">
+          <ul className="space-y-3 text-[13px] font-light text-text-muted">
             <li>
               <NavLink to="/" className="hover:text-black transition-colors">Home</NavLink>
             </li>
@@ -118,7 +118,7 @@ export default function Footer() {
           <h4 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink mb-6">
             Destinations
           </h4>
-          <ul className="space-y-3 text-xs font-light text-text-muted">
+          <ul className="space-y-3 text-[13px] font-light text-text-muted">
             {[
               'United States',
               'New Jersey',
@@ -144,12 +144,44 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Studio Locations */}
+        <div>
+          <h4 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink mb-6">
+            Locations
+          </h4>
+          <ul className="space-y-3 text-[13px] font-light text-text-muted">
+            {[
+              'Bangalore',
+              'Calicut',
+              'Chennai',
+              'Coimbatore',
+              'Hyderabad',
+              'Madurai',
+              'Mumbai',
+              'Vellore',
+              'Salem',
+              'London',
+              'UK',
+              'Trichy'
+            ].map((loc) => {
+              const slug = loc.toLowerCase().replace(/\s+/g, '-');
+              return (
+                <li key={loc}>
+                  <NavLink to={`/destination/${slug}`} className="hover:text-black transition-colors">
+                    {loc}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
         {/* Newsletter form */}
         <div>
           <h4 className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-brand-pink mb-6">
             The Journal
           </h4>
-          <p className="text-xs text-text-muted font-light leading-relaxed mb-6">
+          <p className="text-[13px] text-text-muted font-light leading-relaxed mb-6">
             Subscribe to receive styling guidance, destination scouting updates, and exclusive session bookings.
           </p>
           <form onSubmit={handleSubscribe} className="relative border-b border-black/20 focus-within:border-brand-pink transition-colors pb-2">
@@ -180,7 +212,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between text-[11px] text-text-muted font-light">
         <p>© {new Date().getFullYear()} ZERO GRAVITY PHOTOGRAPHY. All rights reserved.</p>
         <p className="mt-4 md:mt-0 flex items-center gap-1">
-          Designed with <Heart className="w-3 h-3 text-brand-pink fill-brand-pink" /> for Fine-Art Destination Weddings.
+          Designed by <Heart className="w-3 h-3 text-brand-pink fill-brand-pink" /> Zerogravity Technologies
         </p>
       </div>
     </footer>

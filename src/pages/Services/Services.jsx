@@ -10,7 +10,7 @@ export default function Services() {
       id: 'photography',
       title: 'International Wedding Photography',
       subtitle: 'UK, USA & Worldwide Coverage',
-      desc: 'We travel the world to document your love story — from English countryside manors and Scottish Highland castles in the UK, to New York skyline rooftop ceremonies and vineyard weddings in California, USA. Our candid, fine-art storytelling captures raw emotion without staged posing. Every destination receives its own bespoke color treatment, detailed pre-shoot scouting, and a private online gallery of 800+ hand-edited images.',
+      desc: 'We travel the world to document your love story from English countryside manors and Scottish Highland castles in the UK, to New York skyline rooftop ceremonies and vineyard weddings in California, USA. Our candid, fine-art storytelling captures raw emotion without staged posing. Every destination receives its own bespoke color treatment, detailed pre-shoot scouting, and a private online gallery of 800+ hand-edited images.',
       img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
       tag: 'Fine Art & Candid Documentary'
     },
@@ -18,7 +18,7 @@ export default function Services() {
       id: 'decor',
       title: 'Wedding Decors',
       subtitle: 'Designing Dream Backdrops Worldwide',
-      desc: 'We design bespoke wedding decors that complement every international venue — from grand Tudor halls in London and barn conversions in the English countryside, to elegant ballrooms in New York and garden estates in New Jersey. Our curators craft themed floral installations, warm candlelight canopies, and cultural mandap or altar designs that honour both your heritage and your chosen destination.',
+      desc: 'We design bespoke wedding decors that complement every international venue from grand Tudor halls in London and barn conversions in the English countryside, to elegant ballrooms in New York and garden estates in New Jersey. Our curators craft themed floral installations, warm candlelight canopies, and cultural mandap or altar designs that honour both your heritage and your chosen destination.',
       img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80',
       tag: 'Bespoke Scenography'
     },
@@ -26,7 +26,7 @@ export default function Services() {
       id: 'management',
       title: 'Events Management',
       subtitle: 'Flawless Coordination Across Borders',
-      desc: 'Planning an international wedding involves navigating time zones, vendor contracts, local permits, and cultural logistics. Our experienced events management team handles everything end-to-end — from coordinating UK venue bookings and USA vendor schedules, to managing multi-day Indian wedding functions abroad. We ensure every ceremony runs seamlessly so you can be fully present in the moment.',
+      desc: 'Planning an international wedding involves navigating time zones, vendor contracts, local permits, and cultural logistics. Our experienced events management team handles everything end-to-end from coordinating UK venue bookings and USA vendor schedules, to managing multi-day Indian wedding functions abroad. We ensure every ceremony runs seamlessly so you can be fully present in the moment.',
       img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80',
       tag: 'Cross-Border Coordination'
     },
@@ -79,7 +79,7 @@ export default function Services() {
         </h1>
         <div className="w-12 h-[1px] bg-brand-pink/50 mx-auto" />
         <p className="text-[15px] font-light text-neutral-500 leading-relaxed max-w-2xl mx-auto">
-          Zero Gravity Photography specialises in international wedding photography across the UK, USA, Europe, Southeast Asia, and the Middle East. From candid documentary coverage to full wedding management, we bring the same storytelling passion to a London church, a New York rooftop, or a Bali clifftop — wherever your love story unfolds.
+          Zero Gravity Photography specialises in international wedding photography across the UK, USA, Europe, Southeast Asia, and the Middle East. From candid documentary coverage to full wedding management, we bring the same storytelling passion to a London church, a New York rooftop, or a Bali clifftop wherever your love story unfolds.
         </p>
       </section>
 
@@ -164,7 +164,7 @@ export default function Services() {
             Available For International Bookings Worldwide
           </h2>
           <p className="text-[15px] text-text-muted max-w-xl mx-auto font-light leading-relaxed">
-            We cover weddings across the United Kingdom, United States, Canada, Australia, Europe, Southeast Asia, and the Middle East. Our team travels to your destination — bringing our full storytelling expertise wherever your celebration takes place.
+            We cover weddings across the United Kingdom, United States, Canada, Australia, Europe, Southeast Asia, and the Middle East. Our team travels to your destination bringing our full storytelling expertise wherever your celebration takes place.
           </p>
           <div className="pt-4">
             <Link
