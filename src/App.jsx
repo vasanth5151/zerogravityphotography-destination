@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar/Navbar';
+import Loader from './components/Loader/Loader';
 
 // Import Pages
 import Home from './pages/Home/Home';
@@ -91,28 +92,44 @@ function PageWrapper({ children }) {
 
 export default function App() {
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
 
   return (
     <>
-      <ScrollRestoration />
-      <CustomCursor />
-      <Navbar />
-
-      {/* Manage transition timings for switching pages */}
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-          <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-          <Route path="/destination" element={<PageWrapper><Destination /></PageWrapper>} />
-          <Route path="/destination/:loc" element={<PageWrapper><Destination /></PageWrapper>} />
-          <Route path="/galleries" element={<PageWrapper><Galleries /></PageWrapper>} />
-          <Route path="/galleries/:tab" element={<PageWrapper><Galleries /></PageWrapper>} />
-          <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
-          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-          <Route path="/thank-you" element={<PageWrapper><ThankYou /></PageWrapper>} />
-        </Routes>
+        {loading && (
+          <Loader onComplete={() => setLoading(false)} />
+        )}
       </AnimatePresence>
+
+      <ScrollRestoration />
+      
+      {!loading && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+        >
+          <CustomCursor />
+          <Navbar />
+
+          {/* Manage transition timings for switching pages */}
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+              <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+              <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+              <Route path="/destination" element={<PageWrapper><Destination /></PageWrapper>} />
+              <Route path="/destination/:loc" element={<PageWrapper><Destination /></PageWrapper>} />
+              <Route path="/galleries" element={<PageWrapper><Galleries /></PageWrapper>} />
+              <Route path="/galleries/:tab" element={<PageWrapper><Galleries /></PageWrapper>} />
+              <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
+              <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+              <Route path="/thank-you" element={<PageWrapper><ThankYou /></PageWrapper>} />
+            </Routes>
+          </AnimatePresence>
+        </motion.div>
+      )}
     </>
   );
 }

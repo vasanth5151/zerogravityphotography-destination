@@ -1,0 +1,64 @@
+/* Custom animations for the premium loader */
+
+/* Spinning outer dashed circle */
+.loader-spin {
+  animation: loader-spin-animation 10s linear infinite;
+  transform-origin: 64px 64px;
+}
+
+@keyframes loader-spin-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsing brand logo */
+.loader-pulse {
+  animation: loader-pulse-animation 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes loader-pulse-animation {
+  0% {
+    transform: scale(0.94);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.03);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(229, 169, 180, 0.3));
+  }
+}
+
+/* Slow ambient glow pulses */
+.animate-pulse-slow {
+  animation: pulse-slow 5s ease-in-out infinite alternate;
+}
+
+.animate-pulse-reverse {
+  animation: pulse-reverse 5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-slow {
+  0% {
+    opacity: 0.3;
+    transform: translate(-10px, -10px) scale(0.95);
+  }
+  100% {
+    opacity: 0.75;
+    transform: translate(10px, 10px) scale(1.1);
+  }
+}
+
+@keyframes pulse-reverse {
+  0% {
+    opacity: 0.75;
+    transform: translate(15px, 15px) scale(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translate(-15px, -15px) scale(0.95);
+  }
+}
