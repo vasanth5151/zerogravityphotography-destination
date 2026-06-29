@@ -25,49 +25,6 @@ function ScrollRestoration() {
   return null;
 }
 
-// Custom Lens Cursor effect
-function CustomCursor() {
-  useEffect(() => {
-    // Only run on desktop/devices with mouse pointers
-    if (window.matchMedia('(hover: none)').matches) return;
-
-    const cursor = document.createElement('div');
-    cursor.className = 'cursor-lens';
-    document.body.appendChild(cursor);
-
-    const moveCursor = (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-    };
-
-    const handleMouseOver = (e) => {
-      const target = e.target;
-      if (
-        target.tagName === 'A' ||
-        target.tagName === 'BUTTON' ||
-        target.closest('a') ||
-        target.closest('button') ||
-        target.closest('.cursor-pointer') ||
-        target.classList.contains('cursor-pointer')
-      ) {
-        cursor.classList.add('active');
-      } else {
-        cursor.classList.remove('active');
-      }
-    };
-
-    window.addEventListener('mousemove', moveCursor);
-    window.addEventListener('mouseover', handleMouseOver);
-
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-      window.removeEventListener('mouseover', handleMouseOver);
-      cursor.remove();
-    };
-  }, []);
-
-  return null;
-}
 
 // Page Transition animations wrapper
 const pageVariants = {
@@ -110,7 +67,6 @@ export default function App() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
         >
-          <CustomCursor />
           <Navbar />
 
           {/* Manage transition timings for switching pages */}

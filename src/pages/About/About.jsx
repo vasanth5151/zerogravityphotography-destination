@@ -140,7 +140,7 @@ export default function About() {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <h2 className="font-body text-3xl md:text-4xl font-light text-black leading-tight">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-black leading-tight">
               We Don't Just Take Photos. <span className="text-brand-pink">We Capture Souls.</span>
             </h2>
             <p className="text-text-muted text-[15px] font-body leading-relaxed">
@@ -152,11 +152,11 @@ export default function About() {
             <div className="pt-4 grid grid-cols-2 gap-6 border-t border-black/5">
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Mission</h4>
-                <p className="text-[15px] text-text-muted font-normal leading-relaxed">To document your wedding whether in London, New York, Bali, or Chennai with candid storytelling that captures real emotions and creates a legacy you will treasure for generations.</p>
+                <p className="text-[15px] text-text-muted font-body leading-relaxed">To document your wedding whether in London, New York, Bali, or Chennai with candid storytelling that captures real emotions and creates a legacy you will treasure for generations.</p>
               </div>
               <div>
                 <h4 className="text-[10px] font-heading tracking-[0.2em] uppercase text-brand-pink font-semibold mb-2">Our Vision</h4>
-                <p className="text-[15px] text-text-muted font-normal leading-relaxed">To be the most trusted international wedding photography studio for the global Indian diaspora and couples seeking authentic, fine-art documentary coverage worldwide.</p>
+                <p className="text-[15px] text-text-muted font-body leading-relaxed">To be the most trusted international wedding photography studio for the global Indian diaspora and couples seeking authentic, fine-art documentary coverage worldwide.</p>
               </div>
             </div>
           </motion.div>
@@ -233,7 +233,7 @@ export default function About() {
 
           {/* Carousel Layout wrapper */}
           <div className="max-w-4xl mx-auto flex flex-col items-center">
-            
+
             {/* Avatars Row with navigation */}
             <div className="flex items-center justify-center space-x-6 md:space-x-12 select-none mb-8">
               {/* Left Arrow Button */}
@@ -254,15 +254,13 @@ export default function About() {
                     <div
                       key={item.id}
                       onClick={() => !isActive && setActiveIndex(idx)}
-                      className={`relative transition-all duration-500 transform ${
-                        isActive
-                          ? 'scale-115 z-10 cursor-default'
-                          : 'scale-90 opacity-40 hover:opacity-75 cursor-pointer'
-                      }`}
+                      className={`relative transition-all duration-500 transform ${isActive
+                        ? 'scale-115 z-10 cursor-default'
+                        : 'scale-90 opacity-40 hover:opacity-75 cursor-pointer'
+                        }`}
                     >
-                      <div className={`rounded-full overflow-hidden transition-all duration-500 ${
-                        isActive ? 'border-2 border-brand-pink p-1 bg-white ring-4 ring-brand-pink/10 shadow-lg' : ''
-                      }`}>
+                      <div className={`rounded-full overflow-hidden transition-all duration-500 ${isActive ? 'border-2 border-brand-pink p-1 bg-white ring-4 ring-brand-pink/10 shadow-lg' : ''
+                        }`}>
                         <img
                           src={item.image}
                           alt={item.name}
@@ -339,7 +337,7 @@ export default function About() {
                 <tbody className="divide-y divide-black/5 font-light text-sm text-text-muted">
                   {awardsList.map((award, index) => (
                     <tr key={index} className="hover:text-black transition-colors">
-                      <td className="py-4 text-black font-semibold">{award.title}</td>
+                      <td className="py-4 text-black font-heading">{award.title}</td>
                       <td className="py-4">{award.organization}</td>
                       <td className="py-4 text-right text-brand-pink">{award.year}</td>
                     </tr>

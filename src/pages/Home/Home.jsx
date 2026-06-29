@@ -35,12 +35,12 @@ const Pinterest = ({ className }) => (
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
 
   const touchStartY = useRef(0);
   const autoplayTimer = useRef(null);
+  const isTransitioningRef = useRef(false);
 
   // Lock scrolling on Home Page mount
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function Home() {
     if (isPlaying) {
       autoplayTimer.current = setInterval(() => {
         changeSlide('next');
-      }, 5000);
+      }, 3000);
     } else {
       clearInterval(autoplayTimer.current);
     }
@@ -64,8 +64,8 @@ export default function Home() {
   }, [isPlaying, currentIndex]);
 
   const changeSlide = (direction) => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
 
     if (direction === 'next') {
       setCurrentIndex((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
@@ -75,7 +75,7 @@ export default function Home() {
 
     // Set short transition lock (no animation, just cooldown block for scroll throttling)
     setTimeout(() => {
-      setIsTransitioning(false);
+      isTransitioningRef.current = false;
     }, 400);
   };
 
@@ -92,7 +92,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, [isTransitioning]);
+  }, []);
 
   // Swipe gesture listeners
   const handleTouchStart = (e) => {
