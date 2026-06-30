@@ -91,9 +91,13 @@ export default function Navbar() {
       : 'text-white bg-transparent pt-8 pb-6')
     : 'text-black bg-white border-b border-black/5 shadow-sm py-4';
 
-  const logoColorClass = isHomePage
-    ? (isScrolled ? 'text-black' : 'text-white')
-    : 'text-black';
+  const logoColorClass = isMobileMenuOpen
+    ? (isHomePage
+      ? (isScrolled ? 'text-black' : 'text-black lg:text-white')
+      : 'text-black')
+    : (isHomePage
+      ? (isScrolled ? 'text-black' : 'text-white')
+      : 'text-black');
 
   return (
     <>
@@ -222,23 +226,27 @@ export default function Navbar() {
           {/* Right Toolbar */}
           <div className="flex items-center space-x-6">
             {/* Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className={`p-2 transition-colors duration-300 ${isHomePage
-                ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
-                : 'text-black/70 hover:text-brand-pink'
-                }`}
-              aria-label="Search site"
-            >
-              <Search className="w-4 h-4" />
-            </button>
+            {!isMobileMenuOpen && (
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className={`p-2 transition-colors duration-300 ${isHomePage
+                  ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
+                  : 'text-black/70 hover:text-brand-pink'
+                  }`}
+                aria-label="Search site"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+            )}
 
             {/* Hamburger Button (Mobile / Global layout toggle) */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 transition-colors duration-300 ${isHomePage
-                ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
-                : 'text-black/70 hover:text-brand-pink'
+              className={`p-2 transition-colors duration-300 z-50 ${isMobileMenuOpen
+                ? 'text-brand-pink hover:text-brand-pink/80'
+                : isHomePage
+                  ? (isScrolled ? 'text-black/70 hover:text-brand-pink' : 'text-white hover:text-brand-pink')
+                  : 'text-black/70 hover:text-brand-pink'
                 }`}
               aria-label="Toggle menu"
             >

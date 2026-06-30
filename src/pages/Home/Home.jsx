@@ -153,9 +153,8 @@ export default function Home() {
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${
-                isActive ? 'opacity-100 z-20' : isPrev ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${isActive ? 'opacity-100 z-20' : isPrev ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
             >
               <img
                 src={slide.image}
@@ -264,12 +263,17 @@ export default function Home() {
               {formatNumber(currentIndex + 1)}
             </span>
             <div className="w-20 md:w-32 h-[1px] bg-white/20 relative">
-              <motion.div
-                className="absolute top-0 left-0 h-full bg-brand-pink"
-                initial={{ width: '0%' }}
-                animate={{ width: `${((currentIndex + 1) / heroSlides.length) * 100}%` }}
-                transition={{ duration: 0.8 }}
-              />
+              {isPlaying ? (
+                <motion.div
+                  key={currentIndex}
+                  className="absolute top-0 left-0 h-full bg-brand-pink"
+                  initial={{ width: '0%' }}
+                  animate={{ width: '100%' }}
+                  transition={{ duration: 3, ease: 'linear' }}
+                />
+              ) : (
+                <div className="absolute top-0 left-0 h-full w-0 bg-brand-pink" />
+              )}
             </div>
             <span className="text-sm font-heading tracking-widest text-white/60 font-semibold">
               {formatNumber(heroSlides.length)}

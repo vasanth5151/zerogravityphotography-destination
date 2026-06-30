@@ -9,104 +9,179 @@ import herosectionImg6 from "../assets/herosection/herosection-img-6.webp";
 import herosectionImg7 from "../assets/herosection/herosection-img-7.webp";
 import herosectionImg8 from "../assets/herosection/herosection-img-8.webp";
 import herosectionImg9 from "../assets/herosection/herosection-img-9.webp";
+import herosectionImg10 from "../assets/herosection/herosection-img-10.webp";
+import herosectionImg11 from "../assets/herosection/herosection-img-11.webp";
+import herosectionImg12 from "../assets/herosection/herosection-img-12.webp";
+import herosectionImg13 from "../assets/herosection/herosection-img-13.webp";
+import herosectionImg14 from "../assets/herosection/herosection-img-14.webp";
+import herosectionImg15 from "../assets/herosection/herosection-img-15.webp";
+import herosectionImg16 from "../assets/herosection/herosection-img-16.webp";
+import herosectionImg17 from "../assets/herosection/herosection-img-17.webp";
+import herosectionImg18 from "../assets/herosection/herosection-img-18.webp";
+import herosectionImg19 from "../assets/herosection/herosection-img-19.webp";
+import herosectionImg20 from "../assets/herosection/herosection-img-20.webp";
 
 export const heroSlides = [
   {
     id: 1,
-    image: herosectionImg3,
-    title: "USA Wedding Photography",
-    subtitle: "New York, New Jersey, California & Beyond",
-    location: "New York, USA",
+    image: herosectionImg1,
+    title: "Elegant London Celebrations",
+    subtitle: "Stunning union at historic London landmarks",
+    location: "London, UK",
     year: "2025"
   },
   {
     id: 2,
     image: herosectionImg2,
-    title: "UK Wedding Photography",
-    subtitle: "Heritage Estates, City Churches & Scottish Castles",
-    location: "Edinburgh, Scotland",
+    title: "Classic English Romance",
+    subtitle: "Timeless candid wedding stories in London",
+    location: "London, UK",
     year: "2025"
   },
   {
     id: 3,
-    image: herosectionImg1,
-    title: "Zero Gravity Photography",
-    subtitle: "India's Premier International Wedding Photographers",
-    location: "London, United Kingdom",
+    image: herosectionImg3,
+    title: "Grand Ballroom Affair",
+    subtitle: "Luxury South Asian celebrations in New York",
+    location: "USA",
     year: "2025"
   },
-  // {
-  //   id: 4,
-  //   image: herosectionImg4,
-  //   title: "Destination Weddings",
-  //   subtitle: "Your Love Story, Told Across The World",
-  //   location: "Paris, France",
-  //   year: "2025"
-  // },
-  // {
-  //   id: 5,
-  //   image: herosectionImg5,
-  //   title: "Candid Storytelling",
-  //   subtitle: "No Posing. Just Pure, Genuine Emotion.",
-  //   location: "Jaipur, India",
-  //   year: "2024"
-  // },
-  // {
-  //   id: 6,
-  //   image: herosectionImg6,
-  //   title: "Cinematic Wedding Films",
-  //   subtitle: "Hollywood-Grade Films of Your Special Day",
-  //   location: "Goa, India",
-  //   year: "2025"
-  // },
+  {
+    id: 4,
+    image: herosectionImg4,
+    title: "Destination Manor Weddings",
+    subtitle: "Cinematic memories across historic UK estates",
+    location: "London, UK",
+    year: "2025"
+  },
+  {
+    id: 5,
+    image: herosectionImg5,
+    title: "Fjord-side Intimacy",
+    subtitle: "Breathtaking editorial couples in Norway",
+    location: "NORWAY",
+    year: "2024"
+  },
+  {
+    id: 6,
+    image: herosectionImg6,
+    title: "Cinematic Love Stories",
+    subtitle: "High-end wedding films capturing pure emotion",
+    location: "London, UK",
+    year: "2025"
+  },
   {
     id: 7,
     image: herosectionImg7,
-    title: "Pre-Wedding Shoots",
-    subtitle: "Timeless Portraits Before the Big Day",
-    location: "Bali, Indonesia",
+    title: "Pre-Wedding Street Portraits",
+    subtitle: "Stunning pre-wedding visuals in London",
+    location: "London, UK",
     year: "2025"
   },
   {
     id: 8,
     image: herosectionImg8,
-    title: "Aerial Drone Photography",
-    subtitle: "Breathtaking Perspectives from Above",
-    location: "Muscat, Oman",
+    title: "California Vineyard Estates",
+    subtitle: "Panoramic aerial perspectives of luxury weddings",
+    location: "USA",
     year: "2025"
   },
-  // {
-  //   id: 9,
-  //   image: herosectionImg9,
-  //   title: "Fine-Art Portraits",
-  //   subtitle: "Light, Emotion & Artistic Vision",
-  //   location: "Singapore",
-  //   year: "2024"
-  // },
-  // {
-  //   id: 10,
-  //   image: herosectionImg1,
-  //   title: "South Asian Weddings UK",
-  //   subtitle: "Hindu, Muslim & Sikh Ceremonies in Britain",
-  //   location: "Birmingham, United Kingdom",
-  //   year: "2025"
-  // },
-  // {
-  //   id: 11,
-  //   image: herosectionImg4,
-  //   title: "NRI Wedding Photography",
-  //   subtitle: "Celebrating Indian Heritage Abroad",
-  //   location: "Toronto, Canada",
-  //   year: "2025"
-  // },
-  // {
-  //   id: 12,
-  //   image: herosectionImg6,
-  //   title: "International Luxury Weddings",
-  //   subtitle: "Crafted with Passion, Preserved with Art",
-  //   location: "Dubai, UAE",
-  //   year: "2025"
-  // }
+  {
+    id: 9,
+    image: herosectionImg9,
+    title: "Fine-Art Nordic Portraits",
+    subtitle: "Ethereal, light-filled couple styling in Norway",
+    location: "NORWAY",
+    year: "2024"
+  },
+  {
+    id: 10,
+    image: herosectionImg1,
+    title: "New York Rooftop Union",
+    subtitle: "Spectacular multicultural wedding memories",
+    location: "USA",
+    year: "2025"
+  },
+  {
+    id: 11,
+    image: herosectionImg4,
+    title: "NRI Heritage Celebrations",
+    subtitle: "Capturing traditional roots in the heart of London",
+    location: "LONDON, UK",
+    year: "2025"
+  },
+  {
+    id: 12,
+    image: herosectionImg6,
+    title: "Scandinavian Luxe",
+    subtitle: "Premium editorial weddings under Nordic skies",
+    location: "NORWAY",
+    year: "2025"
+  },
+  {
+    id: 13,
+    image: herosectionImg13,
+    title: "Manhattan Golden Hour",
+    subtitle: "Chic editorial portraits in New York City",
+    location: "USA",
+    year: "2025"
+  },
+  {
+    id: 14,
+    image: herosectionImg14,
+    title: "Tri-State Luxury Weddings",
+    subtitle: "Grand South Asian celebrations in New Jersey",
+    location: "USA",
+    year: "2025"
+  },
+  {
+    id: 15,
+    image: herosectionImg15,
+    title: "Royal British Heritage",
+    subtitle: "Capturing royal elegance in London banquets",
+    location: "LONDON, UK",
+    year: "2025"
+  },
+  {
+    id: 16,
+    image: herosectionImg16,
+    title: "The Savoy Splendour",
+    subtitle: "Exquisite details at iconic London hotels",
+    location: "LONDON, UK",
+    year: "2025"
+  },
+  {
+    id: 17,
+    image: herosectionImg17,
+    title: "Contemporary City Vows",
+    subtitle: "Modern couple portraits with London skylines",
+    location: "LONDON, UK",
+    year: "2025"
+  },
+  {
+    id: 18,
+    image: herosectionImg18,
+    title: "Somerset House Romance",
+    subtitle: "Artistic documentary moments in central London",
+    location: "LONDON, UK",
+    year: "2025"
+  },
+  {
+    id: 19,
+    image: herosectionImg19,
+    title: "Napa Valley Vineyards",
+    subtitle: "Rustic luxury romance in California",
+    location: "USA",
+    year: "2025"
+  },
+  {
+    id: 20,
+    image: herosectionImg20,
+    title: "Historic UK Estates",
+    subtitle: "Bespoke destination celebrations in the countryside",
+    location: "LONDON, UK",
+    year: "2025"
+  }
 ];
 
 export const aboutStats = [
