@@ -34,6 +34,7 @@ const Pinterest = ({ className }) => (
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [previousIndex, setPreviousIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
@@ -63,20 +64,22 @@ export default function Home() {
     return () => clearInterval(autoplayTimer.current);
   }, [isPlaying, currentIndex]);
 
-  const changeSlide = (direction) => {
+  const changeSlide = (directionName) => {
     if (isTransitioningRef.current) return;
     isTransitioningRef.current = true;
 
-    if (direction === 'next') {
+    setPreviousIndex(currentIndex);
+
+    if (directionName === 'next') {
       setCurrentIndex((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
     } else {
       setCurrentIndex((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
     }
 
-    // Set short transition lock (no animation, just cooldown block for scroll throttling)
+    // Set transition lock (1200ms cooldown block matching transition duration)
     setTimeout(() => {
       isTransitioningRef.current = false;
-    }, 400);
+    }, 1200);
   };
 
   // Scroll event interceptor to change slides
@@ -142,15 +145,27 @@ export default function Home() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Image Carousel Slider - Loads immediately without transitions, blurs, shadows, or overlays */}
-      <div className="absolute inset-0 z-0">
-        <img
-          key={currentIndex}
-          src={currentSlide.image}
-          alt={currentSlide.title}
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
+      {/* Background Image Carousel Slider with smooth CSS crossfade transitions */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {heroSlides.map((slide, idx) => {
+          const isActive = idx === currentIndex;
+          const isPrev = idx === previousIndex;
+          return (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${
+                isActive ? 'opacity-100 z-20' : isPrev ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+              />
+            </div>
+          );
+        })}
       </div>
 
       {/* Main Center Call to Action Typography - Single static text overlay */}
