@@ -95,7 +95,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, []);
+  }, [currentIndex]);
 
   // Swipe gesture listeners
   const handleTouchStart = (e) => {
